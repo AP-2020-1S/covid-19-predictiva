@@ -4,7 +4,7 @@ url = 'https://www.datos.gov.co/resource/gt2j-8ykr.json?$offset=' ##conexión co
 
 consolidated_files = pd.DataFrame() ##tabla donde se almacenarán los registros
 
-length = 0 ##este parámero deberá cambiar para luego hacer posible el cargue de nuevos registros (actualizarse con el tamaño actual de la tabla)
+length = 0
 i = 0 ##acumulador para poder establecer el número del registro a leer (funciona junto con offset)
 
 ##En cada nueva iteración se leen 1000 registros (este es el máximo por iteración) comenzando por el último encontrado para no repetir
@@ -12,7 +12,7 @@ while length % 1000 == 0: ##mientras la cantidad de registros dividido mil no de
     offset = str(i*1000) ##offset indica en qué registro comenzar
     df = pd.read_json(url+offset)
     consolidated_files = consolidated_files.append(df, sort=False) ##se agregan los nuevos datos a la tabla sin borrar los anteriores
-    length = len(consolidated_files) ##se actualiza la cantidad de registros en la tabla
+    length = len(consolidated_files) ##se actualiza la cantidad de registros en la tabla para ser evaluada en la próxima iteración
     i = i + 1
     print('Cargados ' + length + ' registros') ##validador en pantalla de ejecución
 del df
