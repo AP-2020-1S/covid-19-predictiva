@@ -16,4 +16,4 @@ while length % 1000 == 0: ##mientras la cantidad de registros dividido mil no de
     i = i + 1
     print('Cargados ' + str(length) + ' registros') ##validador en pantalla de ejecución
 del df
-print('Cargue completado: ' + str(length) + ' registros') ##validar finalización del cargue
+print('Cargue completado: ' + str(length) + ' registros') ##validar finalización del cargue de los registros
