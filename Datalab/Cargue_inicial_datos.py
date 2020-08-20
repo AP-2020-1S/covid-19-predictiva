@@ -14,5 +14,6 @@ while length % 1000 == 0: ##mientras la cantidad de registros dividido mil no de
     consolidated_files = consolidated_files.append(df, sort=False) ##se agregan los nuevos datos a la tabla sin borrar los anteriores
     length = len(consolidated_files) ##se actualiza la cantidad de registros en la tabla para ser evaluada en la próxima iteración
     i = i + 1
-    print('Cargados ' + length + ' registros') ##validador en pantalla de ejecución
+    print('Cargados ' + str(length) + ' registros') ##validador en pantalla de ejecución
 del df
+print('Cargue completado: ' + str(length) + ' registros') ##validar finalización del cargue de los registros
