@@ -113,7 +113,10 @@ new_df2 = pd.merge(new_df1, dataset_recuperado,  how='left', left_on=['fecha_rep
 new_df2  ## Se hace left join de las tablas de new_df1 y dataset_recuperado
 
 
-new_df2.dropna(axis=0, how='all', inplace = True) ## Se eliminan vacíos
+new_df2['conteo_confirmados'].fillna(0, inplace=True) ## Se llenan con ceros los campos de los conteos los que tienen NaN
+new_df2['conteo_fallecidos'].fillna(0, inplace=True)
+new_df2['conteo_recuperado'].fillna(0, inplace=True)
+
 
 new_df2['casos_activos'] = new_df2.conteo_confirmados - new_df2.conteo_fallecidos - new_df2.conteo_recuperado ## Se calculan los casos activos
 
