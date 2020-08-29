@@ -25,7 +25,7 @@ for col in data.columns:
 
 from jinja2 import Template
 
-str = open('templates/index.html', 'r').read()
+str = open('templates/resultados_template.html', 'r').read()
 template = Template(str)
 str = template.render(regions=data.columns.tolist())
-open('index.html', 'w').write(str);
+open('resultados.html', 'w').write(str);
