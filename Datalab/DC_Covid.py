@@ -125,5 +125,7 @@ new_df2['casos_activos'].mask(new_df2['casos_activos'] < 0, 0, inplace=True) ## 
 ruta = 'new_df2.csv'
 new_df2.to_csv(ruta, index = True) ## Se exporta el archivo final
 
-
+sum_casos=pd.DataFrame(new_df2.groupby(["ciudad_de_ubicaci_n","fecha_reporte_web"]).agg({"conteo_confirmados":'sum',"conteo_recuperado":'sum',"conteo_fallecidos":'sum', "casos_activos":"sum"}).reset_index())
+ruta = 'sum_casos.csv'
+sum_casos.to_csv(ruta, index = True)
 
