@@ -35,85 +35,73 @@
       <div id="content_header">
     </div>
 
-    <nav style="border:1px solid #BEBDBD; border-width:2px;">
-      <a class="seltext">Region:</a>
-      <select id="region" name="region"  onchange="selectPlot()">
-
-        <!--- Genera las opciones del menu usando Jinja2 --->
+    <div id="site_content">
+      <div id="content">
 
         
-            <option value="N.Amer">N.Amer</option>
+            <div>
+              <h2>Pronosticos en Bogotá</h2>
+              <hr>
+            </div>
+            <div class="myImage" id="Bogotá" style="display:block"> <img src="figs/Bogotá.png" alt="Bogotá"> </div>
+            <br>
+            <h2>Intervalos de confianza:</h2>
+            <h2>Métricas de calibración:</h2>
+            
+            <br>
+            <br>
         
-            <option value="Europe">Europe</option>
+            <div>
+              <h2>Pronosticos en Medellín</h2>
+              <hr>
+            </div>
+            <div class="myImage" id="Medellín" style="display:block"> <img src="figs/Medellín.png" alt="Medellín"> </div>
+            <br>
+            <h2>Intervalos de confianza:</h2>
+            <h2>Métricas de calibración:</h2>
+            
+            <br>
+            <br>
         
-            <option value="Asia">Asia</option>
+            <div>
+              <h2>Pronosticos en Cali</h2>
+              <hr>
+            </div>
+            <div class="myImage" id="Cali" style="display:block"> <img src="figs/Cali.png" alt="Cali"> </div>
+            <br>
+            <h2>Intervalos de confianza:</h2>
+            <h2>Métricas de calibración:</h2>
+            
+            <br>
+            <br>
         
-            <option value="S.Amer">S.Amer</option>
+            <div>
+              <h2>Pronosticos en Barranquilla</h2>
+              <hr>
+            </div>
+            <div class="myImage" id="Barranquilla" style="display:block"> <img src="figs/Barranquilla.png" alt="Barranquilla"> </div>
+            <br>
+            <h2>Intervalos de confianza:</h2>
+            <h2>Métricas de calibración:</h2>
+            
+            <br>
+            <br>
         
-            <option value="Oceania">Oceania</option>
-        
-            <option value="Africa">Africa</option>
-        
-            <option value="Mid.Amer">Mid.Amer</option>
+            <div>
+              <h2>Pronosticos en Cartagena</h2>
+              <hr>
+            </div>
+            <div class="myImage" id="Cartagena" style="display:block"> <img src="figs/Cartagena.png" alt="Cartagena"> </div>
+            <br>
+            <h2>Intervalos de confianza:</h2>
+            <h2>Métricas de calibración:</h2>
+            
+            <br>
+            <br>
         
 
-        <!--- Fin de la modificacion --->
-
-      </select>
-      <br>
-      <hr>
-    </nav>
-
-    <div>
-      <!--- Genera la division de cada imagen usando Jinja2 --->
-
-      
-        
-          <div class="myImage" id="N.Amer" style="display:block"> <img src="figs/N.Amer.png" alt="N.Amer"> </div>
-        
-      
-        
-          <div class="myImage" id="Europe" style="display:none"> <img src="figs/Europe.png" alt="Europe"> </div>
-        
-      
-        
-          <div class="myImage" id="Asia" style="display:none"> <img src="figs/Asia.png" alt="Asia"> </div>
-        
-      
-        
-          <div class="myImage" id="S.Amer" style="display:none"> <img src="figs/S.Amer.png" alt="S.Amer"> </div>
-        
-      
-        
-          <div class="myImage" id="Oceania" style="display:none"> <img src="figs/Oceania.png" alt="Oceania"> </div>
-        
-      
-        
-          <div class="myImage" id="Africa" style="display:none"> <img src="figs/Africa.png" alt="Africa"> </div>
-        
-      
-        
-          <div class="myImage" id="Mid.Amer" style="display:none"> <img src="figs/Mid.Amer.png" alt="Mid.Amer"> </div>
-        
-      
-
-      <!--- Fin de la modificacion --->
-
+      </div>
     </div>
-
-    <script>
-      function selectPlot() {
-        var region = document.getElementById("region").value;
-        var images = document.getElementsByClassName("myImage");
-        for (var i = 0; i < images.length; i++) {
-          if (images[i].id == region) {
-            images[i].style.display = "block"
-          }else{
-            images[i].style.display = "none"
-          }
-        }
-      }
-    </script>
 
   </body>
 </html>
