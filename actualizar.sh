@@ -6,7 +6,7 @@ jupyter nbconvert --to html covid-19-predictiva/Datalab/Exploratorio.ipynb
 mv covid-19-predictiva/Datalab/Exploratorio.html covid-19-predictiva/Dashboard/SARS-COV-2/
 
 cd covid-19-predictiva/Dashboard/SARS-COV-2
-python3.7 jinja2_resultados.py
+python3 jinja2_resultados.py
 
 cd ../../..
 
