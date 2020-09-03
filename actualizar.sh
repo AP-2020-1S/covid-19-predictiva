@@ -1,9 +1,9 @@
 #python3.7 covid-19-predictiva/Datalab/Cargue_inicial_datos.py
 
-jupyter nbconvert --execute covid-19-predictiva/Datalab/Exploratorio.ipynb
+jupyter nbconvert --execute covid-19-predictiva/Datalab/Datos_COVID-19.ipynb
 
-jupyter nbconvert --to html covid-19-predictiva/Datalab/Exploratorio.ipynb
-mv covid-19-predictiva/Datalab/Exploratorio.html covid-19-predictiva/Dashboard/SARS-COV-2/
+jupyter nbconvert --to html covid-19-predictiva/Datalab/Datos_COVID-19.ipynb
+mv covid-19-predictiva/Datalab/Datos_COVID-19.html covid-19-predictiva/Dashboard/SARS-COV-2/
 
 cd covid-19-predictiva/Dashboard/SARS-COV-2
 python3 jinja2_resultados.py
@@ -25,3 +25,4 @@ git commit -m "Actualización Dashboard"
 git push origin
 
 cd ..
+
