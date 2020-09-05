@@ -1,12 +1,18 @@
-#python3.7 covid-19-predictiva/Datalab/Cargue_inicial_datos.py
+#cd covid-19-predictiva/Datalab/
+#python3 Cargue_inicial_datos.py
+#cd ../..
 
-jupyter nbconvert --execute covid-19-predictiva/Datalab/Datos_COVID-19.ipynb
+#jupyter nbconvert --execute covid-19-predictiva/Datalab/Datos_COVID-19.ipynb
+#jupyter nbconvert --execute covid-19-predictiva/Datalab/Modelo_ARIMA_SIR.ipynb
 
 jupyter nbconvert --to html covid-19-predictiva/Datalab/Datos_COVID-19.ipynb
 mv covid-19-predictiva/Datalab/Datos_COVID-19.html covid-19-predictiva/Dashboard/SARS-COV-2/
 
+jupyter nbconvert --to html covid-19-predictiva/Datalab/Modelos_ARIMA_SIR.ipynb
+mv covid-19-predictiva/Datalab/Modelos_ARIMA_SIR.html covid-19-predictiva/Dashboard/SARS-COV-2/
+
 cd covid-19-predictiva/Dashboard/SARS-COV-2
-python3 jinja2_resultados.py
+python3.7 jinja2_resultados.py
 
 cd ../../..
 
@@ -25,4 +31,3 @@ git commit -m "Actualización Dashboard"
 git push origin
 
 cd ..
-
