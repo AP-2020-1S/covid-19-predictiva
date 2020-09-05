@@ -17,5 +17,3 @@ while length % 1000 == 0: ##mientras la cantidad de registros dividido mil no de
     print('Cargados ' + str(length) + ' registros') ##validador en pantalla de ejecución
 del df
 print('Cargue completado: ' + str(length) + ' registros') ##validar finalización del cargue de los registros
-
-consolidated_files.to_csv(r'..\Datos\CasosPositivosCOVID19_Colombia.csv')
