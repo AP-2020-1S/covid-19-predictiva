@@ -8,11 +8,6 @@ mv covid-19-predictiva/Datalab/Datos_COVID-19_respaldo.html covid-19-predictiva/
 jupyter nbconvert --to html covid-19-predictiva/Datalab/Modelos_ARIMA_SIR.ipynb
 mv covid-19-predictiva/Datalab/Modelos_ARIMA_SIR.html covid-19-predictiva/Dashboard/SARS-COV-2/
 
-cd covid-19-predictiva/Dashboard/SARS-COV-2
-python3.7 jinja2_resultados.py
-
-cd ../../..
-
 cp -R covid-19-predictiva/Dashboard/SARS-COV-2 yoalvarezh.github.io
 
 cd yoalvarezh.github.io
